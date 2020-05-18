@@ -3,7 +3,7 @@ http://smart-settle.herokuapp.com/
 
 ![settle-with-band registration](https://raw.githubusercontent.com/sprect8/settle/master/images/01-registration.png "Smart Settle with Band")
 
-Settle is a Trade settlement platform on Ethereum Blockchain using Band for the Cross Chain Hackathon that uses the Band Protocol to perform smart and proven settlement on-chain using verifiable proofs from Band Protocol.
+Settle is a Trade settlement platform on Ethereum Blockchain using Band for the Cross Chain Hackathon that uses the Band Protocol to perform smart and proven settlement on-chain using verifiable proofs from Band Protocol. Remove all paper-based platforms with a single platform to manage invoices, rfps, contracts and volume discounts using Master Service Agreements.
 
 The platform itself is a RFP,Contract, Proposal and Invoicing platform that makes use of the Band Protocol to retrieve oracle information on BTC, Band, and Ethereum trading prices from Binance.
 
@@ -16,6 +16,11 @@ Decentralised platform using Band Protocol oracles to faciliate a transparent an
 With invoicing, purchase orders and contracts new markets can open up to allow buyers, sellers and brokers to trade, speculate, on goods, purchase orders and invoices to allow sellers to fund their contracts, buyers to take loans, etc, all driven using the Band Protocol oracles.
 
 DeFi can be connected to this marketplace to allow buyer and sellers to borrow to fulfill orders. Band Protocol for oracle data across a large number of business and enterprise use-cases (spot price of oil, weather, insurance, share markets, commodity pricing, etc)
+
+## Troubleshoot and limitations
+- On first load, once you grant access to metamask refresh the UI again
+- Data published on main-net and ipfs and visible to all 
+
 
 ## Some screenshots
 ![settle-with-band create-rfp](https://raw.githubusercontent.com/sprect8/settle/master/images/02-create-rfp.png "Create RFPs")
