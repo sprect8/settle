@@ -1,0 +1,440 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "seller",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      },
+      {
+        "internalType": "uint16[]",
+        "name": "volumes",
+        "type": "uint16[]"
+      },
+      {
+        "internalType": "uint16[]",
+        "name": "ppi",
+        "type": "uint16[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "paymentTerms",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "percentage",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "dayTerms",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "currency",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "usersAddress",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      }
+    ],
+    "name": "CreateAddress",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "name": "CreatedObject",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "sourceCurrency",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "targetCurrency",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "sourceProof",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "targetProof",
+        "type": "bytes"
+      }
+    ],
+    "name": "SettlementProof",
+    "type": "event"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "deliveryDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "totalUnits",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      }
+    ],
+    "name": "issuePurchaseOrder",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "poId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "itemTotal",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      }
+    ],
+    "name": "reviewPurchaseOrder",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "poId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      }
+    ],
+    "name": "acceptPOTerms",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "poId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      }
+    ],
+    "name": "indicateDelivered",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "poId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      }
+    ],
+    "name": "ackDelivered",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "poId",
+        "type": "uint256"
+      }
+    ],
+    "name": "issueInvoice",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getContract",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address[2]",
+        "name": "participants",
+        "type": "address[2]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "state",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      },
+      {
+        "internalType": "uint16[]",
+        "name": "volumes",
+        "type": "uint16[]"
+      },
+      {
+        "internalType": "uint16[]",
+        "name": "ppi",
+        "type": "uint16[]"
+      },
+      {
+        "internalType": "uint256[2]",
+        "name": "paymentTerms",
+        "type": "uint256[2]"
+      },
+      {
+        "internalType": "uint256[2]",
+        "name": "dayTerms",
+        "type": "uint256[2]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "poId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPurchaseOrder",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "status",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "total",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "deliveryDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "itemTotal",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "invoiceId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getInvoice",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "settleAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "docAddress",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "poId",
+        "type": "uint256"
+      }
+    ],
+    "name": "checkInvoice",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "invoiceId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "reportPriceSource",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "reportPriceTarget",
+        "type": "bytes"
+      },
+      {
+        "internalType": "uint256",
+        "name": "sourceCurrency",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "usd",
+        "type": "uint256"
+      }
+    ],
+    "name": "settle",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getMyPurchaseOrders",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "pos",
+        "type": "uint256[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

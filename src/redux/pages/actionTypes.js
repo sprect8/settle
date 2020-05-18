@@ -1,0 +1,7 @@
+export default {
+    "GET_RFP_DETAILS": "GET_RFP_DETAILS",
+    "RFP_LOADED": "RFP_LOADED",
+    "GET_ACTIVE_RFPs": "GET_ACTIVE_RFPs",
+    "ACTIVE_RFPS_LOADED": "ACTIVE_RFPS_LOADED",
+    
+};
