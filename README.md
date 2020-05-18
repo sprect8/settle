@@ -1,4 +1,6 @@
 # Settle
+http://smart-settle.herokuapp.com/
+
 ![settle-with-band registration](https://raw.githubusercontent.com/sprect8/settle/master/images/01-registration.png "Smart Settle with Band")
 
 Settle is a Trade settlement platform on Ethereum Blockchain using Band for the Cross Chain Hackathon that uses the Band Protocol to perform smart and proven settlement on-chain using verifiable proofs from Band Protocol.
@@ -8,7 +10,7 @@ The platform itself is a RFP,Contract, Proposal and Invoicing platform that make
 The smart-settle feature will consider your crypto balance, balance owed on the invoice, and the crypto price to settle the invoice automatically.
 
 ## Value
-Decentralised platform using Band Protocol oracle
+Decentralised platform using Band Protocol oracles to faciliate a transparent and open trade platform
 
 ## Extensions
 With invoicing, purchase orders and contracts new markets can open up to allow buyers, sellers and brokers to trade, speculate, on goods, purchase orders and invoices to allow sellers to fund their contracts, buyers to take loans, etc, all driven using the Band Protocol oracles.
